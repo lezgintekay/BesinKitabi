@@ -1,7 +1,8 @@
-package com.lezgintekay.besinkitabi
+package com.lezgintekay.besinkitabi.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lezgintekay.besinkitabi.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
