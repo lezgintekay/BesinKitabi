@@ -1,7 +1,7 @@
 # BesinKitabi
 ## BTK Akademi İleri Seviye Kotlin Kursu Son Projesi
 ### Navigation & Fragment 
-### MVV
+### MVVM
 ### Retrofit 
 ### Rxjava 
 ### Coroutines
