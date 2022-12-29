@@ -4,11 +4,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
+        <data>
+                <variable
+                    name="besin"
+                    type="com.lezgintekay.besinkitabi.model.Besin" />
+                <variable
+                    name="listener"
+                    type="com.lezgintekay.besinkitabi.adapter.BesinClickListener" />
+        </data>
+
+
 <LinearLayout
 
     android:orientation="horizontal"
     android:layout_width="match_parent"
+    android:onClick="@{listener::besinTiklandi}"
     android:layout_height="150dp">
+
+        <TextView
+            android:id="@+id/besin_uuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@{String.valueOf(besin.uuid)}"
+            />
 
         <ImageView
             android:id="@+id/imageView"
@@ -16,7 +35,8 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="3"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            android:downloadImage="@{besin.besinGorsel}"
+             />
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="wrap_content"
@@ -30,7 +50,7 @@
             android:id="@+id/isim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Besin İsmi Gelecek"
+            android:text="@{besin.besinIsim}"
             android:layout_margin="5dp"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -39,7 +59,7 @@
             android:id="@+id/kalori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Besin Kalorisi Gelecek"
+            android:text="@{besin.besinKalori}"
             android:layout_margin="5dp"
             android:textSize="18sp"
             />
